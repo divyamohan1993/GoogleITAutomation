@@ -1,0 +1,26 @@
+# -----------------------------------------------------------
+# Projects of Google IT Automation & Professional.
+# (c) 2020 Divya Mohan
+# Do not use this for any neferious purposes. You may refer to the code for understanding. Code your own work. Released under CC BY-NC-SA
+# Queries at iam@dmj.one
+# -----------------------------------------------------------
+
+#! /usr/bin/env python3
+import os
+import requests
+ 
+folder = "/data/feedback/"
+url = "http://35.194.1.186/feedback/"
+ 
+for file in os.listdir(folder):
+    title = ["title","name","date","feedback"]
+    data = {}
+    lines = []
+    print(file)
+    with open(folder+"/"+file,"r") as txtfile:
+        x = 0
+        for line in txtfile:
+            data[title[x]] = line.rstrip('\n')
+            x += 1
+    print(data)
+    response = requests.post(url,json=data)
