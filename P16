@@ -1,3 +1,11 @@
+# -----------------------------------------------------------
+# Projects of Google IT Automation & Professional Certifications.
+#
+# (C) 2020 Divya Mohan
+# Released under CC BY-NC-SA
+# iam@dmj.one
+# -----------------------------------------------------------
+
 #!/usr/bin/env python3
 
 import email.message
